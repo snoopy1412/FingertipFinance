@@ -2,14 +2,21 @@ import { View, Text } from "@tarojs/components";
 import { NoticeBar, Button } from "@nutui/nutui-react-taro";
 import PrivacyProtectionGuide from "@/components/PrivacyProtectionGuide";
 import "./index.scss";
+import { useState } from "react";
 
 const noticeText =
   "本业务未与任何中介机构合作，除向用户收取正常贷款利息外，绝无任何附加费用！";
 
 function Index() {
+  const [privacyProtectionGuideVisible, setPrivacyProtectionGuideVisible] =
+    useState(false);
   return (
     <View className="index">
-      <PrivacyProtectionGuide visible={true} />
+      <PrivacyProtectionGuide
+        visible={privacyProtectionGuideVisible}
+        onClose={() => setPrivacyProtectionGuideVisible(false)}
+        onConfirm={() => setPrivacyProtectionGuideVisible(false)}
+      />
       <View className="index__content">
         <NoticeBar
           content={noticeText}
@@ -27,7 +34,6 @@ function Index() {
           <Text className="estimate-section__amount">30,0000</Text>
           <Text className="estimate-section__interest">年利率5.9%</Text>
         </View>
-        PrivacyProtectionGuide
       </View>
       <View className="index__apply">
         <Button
@@ -35,6 +41,7 @@ function Index() {
           type="primary"
           size="large"
           className="apply__button"
+          onClick={() => setPrivacyProtectionGuideVisible(true)}
         >
           立即申请
         </Button>

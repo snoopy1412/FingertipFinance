@@ -16,7 +16,7 @@
   border-radius: 8px;
   background: linear-gradient(0deg, #ffffff 75%, #fef2e9 100%);
   position: relative;
-  padding: 26px 28px;
+  padding: 26px 20px;
 }
 
 .image {
@@ -36,7 +36,7 @@
   font-weight: bold;
   color: #333333;
   @extend .block-center;
-  margin-bottom: 18px;
+  margin-bottom: 11px;
 }
 
 .description {
@@ -45,7 +45,7 @@
   font-weight: normal;
   color: #333333;
   line-height: 23px;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 .privacyPolicyLink {
   color: #c84d22;
@@ -53,13 +53,18 @@
 .buttonContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .rejectButton {
+  width: 120px;
+  height: 40px;
+  background: #eeeeee;
   // 在此添加 rejectButton 的样式
 }
 
 .confirmButton {
+  width: 120px;
+  height: 40px;
   // 在此添加 confirmButton 的样式
 }

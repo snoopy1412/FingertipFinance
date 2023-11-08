@@ -1,11 +1,21 @@
-import React, { useState } from "react";
-import { View, Image, Text, Button } from "@tarojs/components";
-import { Popup } from "@nutui/nutui-react-taro";
+import { View, Image, Text } from "@tarojs/components";
+import { Popup, Button } from "@nutui/nutui-react-taro";
 import guide from "@/assets/privacy-protection-guide.png";
 
 import styles from "./index.module.scss";
 
-const PrivacyProtectionGuide = ({ visible, onClose }) => {
+interface PrivacyProtectionGuideProps {
+  visible?: boolean;
+  onClose?: () => void;
+  onConfirm?: () => void;
+  confirmLoading?: boolean;
+}
+const PrivacyProtectionGuide = ({
+  visible,
+  onClose,
+  onConfirm,
+  confirmLoading,
+}: PrivacyProtectionGuideProps) => {
   return (
     <View className={styles.modal}>
       <Popup
@@ -25,8 +35,17 @@ const PrivacyProtectionGuide = ({ visible, onClose }) => {
             </Text>
           </View>
           <View className={styles.buttonContainer}>
-            <Button className={styles.rejectButton}>拒绝</Button>
-            <Button className={styles.confirmButton}>确定</Button>
+            <Button className={styles.rejectButton} onClick={onClose}>
+              拒绝
+            </Button>
+            <Button
+              className={styles.confirmButton}
+              type="primary"
+              onClick={onConfirm}
+              loading={confirmLoading}
+            >
+              同意
+            </Button>
           </View>
         </View>
       </Popup>
