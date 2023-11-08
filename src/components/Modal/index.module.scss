@@ -59,3 +59,14 @@
   width: 120px;
   height: 40px;
 }
+.cancel {
+  position: absolute;
+  right: -8px;
+  top: -45px;
+  padding: 8px;
+}
+.cancelIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}

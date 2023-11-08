@@ -2,6 +2,8 @@ import React from "react";
 import { View, Image } from "@tarojs/components";
 import { Popup, Button } from "@nutui/nutui-react-taro";
 
+import cancelIcon from "@/assets/modal/cancel.png";
+
 import styles from "./index.module.scss";
 
 export interface ModalProps {
@@ -15,6 +17,7 @@ export interface ModalProps {
   confirmLoading?: boolean;
   footer?: React.ReactNode | boolean;
   icon?: string;
+  closable?: boolean;
 }
 const Modal = ({
   open,
@@ -26,6 +29,7 @@ const Modal = ({
   footer = true,
   okText = "确定",
   children,
+  closable = true,
   confirmLoading,
 }: ModalProps) => {
   return (
@@ -34,6 +38,12 @@ const Modal = ({
         <View className={styles.container}>
           {icon ? (
             <Image src={icon} className={styles.modalIcon}></Image>
+          ) : null}
+
+          {closable ? (
+            <View className={styles.cancel} onClick={onCancel}>
+              <Image src={cancelIcon} className={styles.cancelIcon}></Image>
+            </View>
           ) : null}
           <View className={styles.title}>{title}</View>
           <View className={styles.content}>{children}</View>

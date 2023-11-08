@@ -5,6 +5,20 @@
       "list": [
         {
           "name": "",
+          "pathName": "packages/login/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "pages/my/index",
           "query": "",
           "launchMode": "default",

@@ -10,6 +10,7 @@ const PrivacyProtectionGuide = (props: ModalProps) => {
   return (
     <Modal
       {...props}
+      closable={false}
       title="提示"
       footer={
         <div className={styles.footer}>

@@ -8,6 +8,7 @@ const PrivacyProtectionGuide = (props: ModalProps) => {
   return (
     <Modal
       {...props}
+      closable={false}
       title="隐私保护指引"
       cancelText="拒绝"
       okText="同意"

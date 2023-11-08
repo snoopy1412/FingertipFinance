@@ -1,5 +1,13 @@
 export default defineAppConfig({
   pages: ["pages/index/index", "pages/my/index"],
+  subPackages: [
+    {
+      root: "packages/login",
+      pages: ["index"],
+      name: "登录",
+      independent: false,
+    },
+  ],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",
