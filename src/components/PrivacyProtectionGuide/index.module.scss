@@ -1,0 +1,65 @@
+.block-center {
+  text-align: center;
+  display: block;
+}
+
+.modal {
+  :global {
+    .nut-popup {
+      overflow-y: initial;
+    }
+  }
+}
+.content {
+  width: 300px;
+  height: 225px;
+  border-radius: 8px;
+  background: linear-gradient(0deg, #ffffff 75%, #fef2e9 100%);
+  position: relative;
+  padding: 26px 28px;
+}
+
+.image {
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  top: -24px;
+  left: calc(50% - 58px / 2);
+}
+
+.textContainer {
+  margin-top: calc(45px - 26px);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  @extend .block-center;
+  margin-bottom: 18px;
+}
+
+.description {
+  font-size: 14px;
+  @extend .block-center;
+  font-weight: normal;
+  color: #333333;
+  line-height: 23px;
+  margin-bottom: 20px;
+}
+.privacyPolicyLink {
+  color: #c84d22;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rejectButton {
+  // 在此添加 rejectButton 的样式
+}
+
+.confirmButton {
+  // 在此添加 confirmButton 的样式
+}

@@ -1,0 +1,15 @@
+page {
+  --nutui-tabbar-active-color: #c82248;
+  --nutui-brand-color: #c82248;
+  --nutui-brand-color-end: #c82248;
+
+  --nutui-noticebar-line-height: 35px;
+  --nutui-noticebar-line-height: 35px;
+
+  --nutui-popup-border-radius: 8px;
+
+  View,
+  Text {
+    box-sizing: border-box !important;
+  }
+}
