@@ -1,4 +1,4 @@
-import { View, Image } from "@tarojs/components";
+import { View, Image, Text } from "@tarojs/components";
 import { Button } from "@nutui/nutui-react-taro";
 import loginBg from "@/assets/loginBg.jpg";
 
@@ -9,6 +9,9 @@ const Login = () => {
     <View className={styles.login}>
       <View className={styles.loginContainer}>
         <Image src={loginBg} className={styles.loginBg}></Image>
+        <View className={styles.text}>
+          <Text className={styles.textInner}>东方指尖贷</Text>
+        </View>
       </View>
       <View className={styles.buttonContainer}>
         <Button className={styles.loginButton} type="primary">

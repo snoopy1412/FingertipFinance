@@ -5,6 +5,7 @@
 
 .loginContainer {
   margin-top: 102px;
+  position: relative;
 }
 
 .loginBg {
@@ -12,7 +13,19 @@
   height: 220px;
   object-fit: cover;
 }
-
+.text {
+  position: absolute;
+  width: 100%;
+  top: 192px;
+  left: 0;
+  text-align: center;
+}
+.textInner {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+  line-height: 1;
+}
 .buttonContainer {
   margin-top: 89px;
   text-align: center;
