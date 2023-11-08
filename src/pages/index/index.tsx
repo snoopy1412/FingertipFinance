@@ -1,6 +1,7 @@
 import { View, Text } from "@tarojs/components";
 import { NoticeBar, Button } from "@nutui/nutui-react-taro";
-import PrivacyProtectionGuide from "@/components/PrivacyProtectionGuide";
+import PrivacyProtectionGuide from "./PrivacyProtectionGuide";
+import NoAdditionalFeesModal from "./NoAdditionalFeesModal";
 import "./index.scss";
 import { useState } from "react";
 
@@ -12,10 +13,11 @@ function Index() {
     useState(false);
   return (
     <View className="index">
+      <NoAdditionalFeesModal />
       <PrivacyProtectionGuide
-        visible={privacyProtectionGuideVisible}
-        onClose={() => setPrivacyProtectionGuideVisible(false)}
-        onConfirm={() => setPrivacyProtectionGuideVisible(false)}
+        open={privacyProtectionGuideVisible}
+        onCancel={() => setPrivacyProtectionGuideVisible(false)}
+        onOk={() => setPrivacyProtectionGuideVisible(false)}
       />
       <View className="index__content">
         <NoticeBar

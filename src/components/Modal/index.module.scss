@@ -1,0 +1,61 @@
+.block-center {
+  text-align: center;
+  display: block;
+}
+
+.modal {
+  :global {
+    .nut-popup {
+      overflow-y: initial;
+    }
+  }
+}
+.container {
+  width: 300px;
+  border-radius: 8px;
+  background: linear-gradient(0deg, #ffffff 75%, #fef2e9 100%);
+  position: relative;
+  padding: 26px 20px;
+}
+
+.modalIcon {
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  top: -24px;
+  left: calc(50% - 58px / 2);
+}
+
+.title {
+  margin-top: calc(45px - 26px);
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  @extend .block-center;
+  margin-bottom: 11px;
+}
+
+.content {
+  font-size: 14px;
+  @extend .block-center;
+  font-weight: normal;
+  color: #333333;
+  line-height: 23px;
+  margin-bottom: 13px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cancelButton {
+  width: 120px;
+  height: 40px;
+  background: #eeeeee;
+}
+
+.confirmButton {
+  width: 120px;
+  height: 40px;
+}
