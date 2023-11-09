@@ -25,6 +25,18 @@ export default defineAppConfig({
       name: "借款信息填写",
       independent: false,
     },
+    {
+      root: "packages/DrawdownRecord",
+      pages: ["index"],
+      name: "用款记录",
+      independent: false,
+    },
+    {
+      root: "packages/ApplicationRecord",
+      pages: ["index"],
+      name: "申请记录",
+      independent: false,
+    },
   ],
   window: {
     backgroundTextStyle: "light",
