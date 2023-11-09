@@ -58,12 +58,7 @@ const My = () => {
             onClick={() => handleClick("drawdown-record")}
           />
         </Cell.Group>
-        <Button
-          className={style.button}
-          shape="round"
-          type="default"
-          size="large"
-        >
+        <Button className={style.button} shape="round" type="default">
           退出登录
         </Button>
       </View>

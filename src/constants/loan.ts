@@ -31,3 +31,12 @@ export const bankCardOptions: Option[] = [
     value: "6230**********0000",
   },
 ];
+
+/**
+ * 我要借钱 借款期限
+ */
+export const loanPeriodOptions: Option[] = [
+  { text: "三个月", value: "3" },
+  { text: "六个月", value: "6" },
+  { text: "十二个月", value: "12" },
+];

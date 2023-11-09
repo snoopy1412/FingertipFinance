@@ -61,6 +61,18 @@ export default defineAppConfig({
       name: "还款明细",
       independent: false,
     },
+    {
+      root: "packages/loan-money",
+      pages: ["index"],
+      name: "我要借钱",
+      independent: false,
+    },
+    {
+      root: "packages/loan-money-success",
+      pages: ["index"],
+      name: "成功用信",
+      independent: false,
+    },
   ],
   window: {
     backgroundTextStyle: "light",
