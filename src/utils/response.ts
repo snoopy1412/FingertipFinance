@@ -1,5 +1,5 @@
 import Taro from "@tarojs/taro";
-import { authTokenStorage } from "./storage";
+import { USER_PROFILE_KEY, authTokenStorage } from "./storage";
 
 interface IApiResponse {
   statusCode: number;
@@ -15,6 +15,8 @@ export const handleApiResponse = ({ statusCode, message }: IApiResponse) => {
       })?.then(() => {
         // 清除过期的token
         authTokenStorage.removeToken();
+        // 清除过期的用户信息
+        Taro.removeStorageSync(USER_PROFILE_KEY);
         Taro.navigateTo({
           url: "/pages/login/index",
         });

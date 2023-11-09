@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import qs from "qs";
 import { TaroAdapter } from "axios-taro-adapter";
 import { authTokenStorage } from "./storage";
@@ -42,25 +42,43 @@ instance.interceptors.response.use(
   }
 );
 
-export const get = (url: string, params?: any) => {
-  return instance.get(url, { params: encryptSensitiveData(params) });
+export const get = (
+  url: string,
+  params?: any,
+  config?: AxiosRequestConfig<string>
+) => {
+  return instance.get(url, {
+    params: encryptSensitiveData(params),
+    ...(config || {}),
+  });
 };
 // 此需要符合form data 的提交格式
-export const post = (url: string, data?: any) => {
+export const post = (
+  url: string,
+  data?: any,
+  config?: AxiosRequestConfig<string>
+) => {
   const formData = qs.stringify(encryptSensitiveData(data));
-  return instance.post(url, formData, {
-    headers: { "content-type": "application/x-www-form-urlencoded" },
-  });
+  return instance.post(url, formData, config);
 };
 
-export const put = (url: string, data?: any) => {
+export const put = (
+  url: string,
+  data?: any,
+  config?: AxiosRequestConfig<string>
+) => {
   const formData = qs.stringify(encryptSensitiveData(data));
-  return instance.put(url, formData, {
-    headers: { "content-type": "application/x-www-form-urlencoded" },
-  });
+  return instance.put(url, formData, config);
 };
-export const del = (url: string, params?: any) => {
-  return instance.delete(url, { params: encryptSensitiveData(params) });
+export const del = (
+  url: string,
+  params?: any,
+  config?: AxiosRequestConfig<string>
+) => {
+  return instance.delete(url, {
+    params: encryptSensitiveData(params),
+    ...(config || {}),
+  });
 };
 
 export default instance;
