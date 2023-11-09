@@ -1,5 +1,4 @@
 import { View } from "@tarojs/components";
-import FooterTabBar from "@/components/FooterTabBar";
 import { Button, Cell } from "@nutui/nutui-react-taro";
 import { Right } from "@nutui/icons-react-taro";
 import style from "./index.module.scss";
