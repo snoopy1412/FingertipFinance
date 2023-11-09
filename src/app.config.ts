@@ -26,13 +26,13 @@ export default defineAppConfig({
       independent: false,
     },
     {
-      root: "packages/DrawdownRecord",
+      root: "packages/drawdown-record",
       pages: ["index"],
       name: "用款记录",
       independent: false,
     },
     {
-      root: "packages/ApplicationRecord",
+      root: "packages/application-record",
       pages: ["index"],
       name: "申请记录",
       independent: false,
