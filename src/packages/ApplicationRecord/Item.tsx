@@ -37,7 +37,17 @@ const Item = ({ info, onClick }: ItemProps) => {
     <View className={styles.item}>
       <View className={styles.header}>
         <Text className={styles.title}>申请记录</Text>
-        <Text className={styles.status}>状态：{info?.xdstate}</Text>
+        <Text
+          className={styles.status}
+          style={{
+            color:
+              info?.xdstate === "申请成功"
+                ? "#18846E"
+                : "var(--nutui-brand-color)",
+          }}
+        >
+          状态：{info?.xdstate}
+        </Text>
       </View>
       <View className={styles.content}>
         {itemInfo.map((item) => (
@@ -48,10 +58,10 @@ const Item = ({ info, onClick }: ItemProps) => {
         ))}
         <View className={styles.action}>
           <Button
-            type="danger"
-            className={styles.button}
             onClick={handleClick}
             fill="outline"
+            size="small"
+            shape="round"
           >
             查看贷款证明
           </Button>
