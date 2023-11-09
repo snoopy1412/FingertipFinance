@@ -5,6 +5,13 @@
       "list": [
         {
           "name": "",
+          "pathName": "packages/complete-profile/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "packages/login/index",
           "query": "",
           "launchMode": "default",

@@ -7,6 +7,12 @@ export default defineAppConfig({
       name: "登录",
       independent: false,
     },
+    {
+      root: "packages/complete-profile",
+      pages: ["index"],
+      name: "个人信息",
+      independent: false,
+    },
   ],
   window: {
     backgroundTextStyle: "light",
