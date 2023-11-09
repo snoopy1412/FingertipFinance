@@ -5,6 +5,7 @@
 import { Button, Checkbox } from "@nutui/nutui-react-taro";
 import { View, Text } from "@tarojs/components";
 import styles from "./index.module.scss";
+import SubmitButtonFooter from "@/components/SubmitButtonFooter";
 
 const auditTaskList = [
   {
@@ -116,11 +117,7 @@ const AuthorizationQuery = () => {
         </Checkbox>
       </View>
 
-      <View className={styles.footer}>
-        <Button type="primary" className={styles.submitButton}>
-          提交
-        </Button>
-      </View>
+      <SubmitButtonFooter onClick={() => {}} />
     </View>
   );
 };

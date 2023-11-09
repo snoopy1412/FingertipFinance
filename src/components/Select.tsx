@@ -1,6 +1,5 @@
-// 学位 本科 硕士
 import { Right } from "@nutui/icons-react-taro";
-import { Cell, Picker } from "@nutui/nutui-react-taro";
+import { Cell } from "@nutui/nutui-react-taro";
 
 export interface Option {
   text: string;
@@ -12,8 +11,6 @@ export interface SelectProps {
 }
 
 const Select = ({ options, value, placeholder = "请选择" }) => {
-  console.log(value);
-
   return (
     <Cell
       style={

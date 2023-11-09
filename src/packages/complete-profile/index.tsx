@@ -6,9 +6,8 @@ import { View } from "@tarojs/components";
 import UploadIdCard from "./UploadIdCard";
 import styles from "./index.module.scss";
 import ProfileForm from "./ProfileForm";
-import { Button } from "@nutui/nutui-react-taro";
-import { Sticky } from "@nutui/nutui-react-taro";
 import { useRef } from "react";
+import SubmitButtonFooter from "@/components/SubmitButtonFooter";
 
 const CompleteProfile = () => {
   const ref = useRef<any>();
@@ -29,17 +28,11 @@ const CompleteProfile = () => {
         </View>
       </View>
 
-      <View className={styles.footer}>
-        <Button
-          type="primary"
-          className={styles.button}
-          onClick={() => {
-            ref?.current?.submit();
-          }}
-        >
-          提交
-        </Button>
-      </View>
+      <SubmitButtonFooter
+        onClick={() => {
+          ref?.current?.submit();
+        }}
+      />
     </View>
   );
 };

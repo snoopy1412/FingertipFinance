@@ -6,6 +6,7 @@ import Form from "./Form";
 import styles from "./index.module.scss";
 import { Button } from "@nutui/nutui-react-taro";
 import { useRef } from "react";
+import SubmitButtonFooter from "@/components/SubmitButtonFooter";
 
 const LoanInfoForm = () => {
   const ref = useRef<any>();
@@ -23,17 +24,11 @@ const LoanInfoForm = () => {
       <View className={styles.loanForm}>
         <Form onFinish={handleFinish} />
       </View>
-      <View className={styles.footer}>
-        <Button
-          type="primary"
-          className={styles.submitButton}
-          onClick={() => {
-            ref?.current?.submit();
-          }}
-        >
-          提交
-        </Button>
-      </View>
+      <SubmitButtonFooter
+        onClick={() => {
+          ref?.current?.submit();
+        }}
+      />
     </View>
   );
 };
