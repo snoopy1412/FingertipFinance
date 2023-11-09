@@ -2,6 +2,7 @@ import { View } from "@tarojs/components";
 import { useState } from "react";
 import Modal from "@/components/Modal";
 import { Input, Button } from "@nutui/nutui-react-taro";
+import CaptchaModal from "@/assets/modal/CaptchaModal.png";
 import styles from "./index.module.scss";
 
 const CaptchaCodeModal = ({ onNext, visible, title, phoneNumber }) => {
@@ -14,6 +15,7 @@ const CaptchaCodeModal = ({ onNext, visible, title, phoneNumber }) => {
       open={visible}
       title={title}
       closable={false}
+      icon={CaptchaModal}
       footer={
         <View className={styles.footer}>
           <Button
