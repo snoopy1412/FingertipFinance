@@ -99,7 +99,7 @@ function Index() {
   const handleBorrowMoneyButtonClick = () => {
     // 跳转到借钱页面
     Taro.navigateTo({
-      url: "/packages/loan/index",
+      url: "/packages/loan-money/index",
     });
   };
 

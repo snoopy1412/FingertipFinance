@@ -2,15 +2,14 @@ import { useState, useRef } from "react";
 import { View, Text } from "@tarojs/components";
 import { Button, Radio, Notify } from "@nutui/nutui-react-taro";
 import Taro from "@tarojs/taro";
+import CaptchaCodeModal from "@/components/CaptchaCodeModal";
 import Form from "./Form";
 import TipModal from "./TipModal";
-import CaptchaCodeModal from "./CaptchaCodeModal";
 import PasswordKeyboard from "./PasswordKeyboard";
 import styles from "./index.module.scss";
 
 const LoanMoney = () => {
   const ref = useRef<any>();
-
   const [checkAgreement, setCheckAgreement] = useState<boolean>(false);
   const [notifyVisible, setNotifyVisible] = useState<boolean>(false);
   const [tipVisible, setTipVisible] = useState<boolean>(false);
@@ -95,7 +94,11 @@ const LoanMoney = () => {
         onConfirm={handleConfirmWallet}
       />
       <TipModal visible={tipVisible} onOk={handleOkTip} />
-      <CaptchaCodeModal visible={captchaCodeVisible} onNext={handleNext} />
+      <CaptchaCodeModal
+        visible={captchaCodeVisible}
+        onNext={handleNext}
+        title="放款验证码"
+      />
       <View className={styles.banner}>
         <Button> 用款记录</Button>
         <View>

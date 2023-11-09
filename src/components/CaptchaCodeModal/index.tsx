@@ -4,7 +4,7 @@ import Modal from "@/components/Modal";
 import { Input, Button } from "@nutui/nutui-react-taro";
 import styles from "./index.module.scss";
 
-const CaptchaCodeModal = ({ onNext, visible }) => {
+const CaptchaCodeModal = ({ onNext, visible, title }) => {
   const [code, setCode] = useState("");
   const handleNext = () => {
     onNext(code);
@@ -12,7 +12,7 @@ const CaptchaCodeModal = ({ onNext, visible }) => {
   return (
     <Modal
       open={visible}
-      title="放款验证码"
+      title={title}
       closable={false}
       footer={
         <View className={styles.footer}>
