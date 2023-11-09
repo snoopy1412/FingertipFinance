@@ -13,6 +13,18 @@ export default defineAppConfig({
       name: "个人信息",
       independent: false,
     },
+    {
+      root: "packages/authorization-query",
+      pages: ["index"],
+      name: "查询授权书",
+      independent: false,
+    },
+    {
+      root: "packages/loan-info-form",
+      pages: ["index"],
+      name: "借款信息填写",
+      independent: false,
+    },
   ],
   window: {
     backgroundTextStyle: "light",

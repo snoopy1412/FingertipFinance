@@ -5,6 +5,20 @@
       "list": [
         {
           "name": "",
+          "pathName": "packages/loan-info-form/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "packages/authorization-query/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "packages/complete-profile/index",
           "query": "",
           "launchMode": "default",

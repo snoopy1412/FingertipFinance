@@ -2,7 +2,6 @@ import UploadIdCardItem from "./UploadIdCardItem";
 import { View } from "@tarojs/components";
 import IdCardFrontIcon from "@/assets/idCardFront.jpg";
 import IdCardBackIcon from "@/assets/IdCardBack.jpg";
-import Taro from "@tarojs/taro";
 import styles from "./UploadIdCard.module.scss";
 
 const UploadIdCard = () => {

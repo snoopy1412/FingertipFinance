@@ -8,8 +8,14 @@ page {
 
   --nutui-popup-border-radius: 8px;
 
+  --nutui-checkbox-label-font-size: 12px;
+
   View,
   Text {
     box-sizing: border-box !important;
+  }
+
+  .nut-checkbox__icon {
+    color: #f39e15;
   }
 }

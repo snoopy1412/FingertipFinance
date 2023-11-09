@@ -1,0 +1,113 @@
+.container {
+  box-sizing: border-box;
+  width: 345px;
+  margin: 23px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header {
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.bankName {
+  font-size: 14px;
+  font-weight: normal;
+  color: #020202;
+}
+
+.authorizationText {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 25px;
+  color: #040404;
+}
+
+.importantText {
+  text-decoration: underline;
+}
+
+.taskList {
+  width: 300px;
+}
+
+.taskItem {
+  width: 100%;
+  background: #f3f3f4;
+  border-radius: 5px;
+  display: flex;
+  padding: 12px 5px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  :global {
+    .nut-icon-check-normal {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.authorizationValidity {
+  Text {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 25px;
+    color: #040404;
+  }
+}
+
+.authorizationUnderstanding {
+}
+
+.personalInfo {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 25px;
+  color: #040404;
+}
+
+.personalInfoItem {
+}
+
+.personalInfoLabel {
+}
+
+.personalInfoValue {
+}
+
+.agreement {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 25px;
+  color: #040404;
+  margin-bottom: 65px;
+}
+
+.agreementCheckbox {
+}
+
+.agreementText {
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+
+  height: 65px;
+  background: #ffffff;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitButton {
+  width: 345px;
+}
