@@ -98,6 +98,7 @@ const LoanMoney = () => {
         visible={captchaCodeVisible}
         onNext={handleNext}
         title="放款验证码"
+        phoneNumber="18888888888"
       />
       <View className={styles.banner}>
         <Button> 用款记录</Button>

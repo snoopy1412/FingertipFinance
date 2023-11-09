@@ -4,7 +4,7 @@ import Modal from "@/components/Modal";
 import { Input, Button } from "@nutui/nutui-react-taro";
 import styles from "./index.module.scss";
 
-const CaptchaCodeModal = ({ onNext, visible, title }) => {
+const CaptchaCodeModal = ({ onNext, visible, title, phoneNumber }) => {
   const [code, setCode] = useState("");
   const handleNext = () => {
     onNext(code);
@@ -28,7 +28,7 @@ const CaptchaCodeModal = ({ onNext, visible, title }) => {
       }
     >
       <View>
-        <View>请输入139****1239收到的 验证码</View>
+        <View>{`请输入${phoneNumber}收到的 验证码`}</View>
         <View
           style={{
             display: "flex",
