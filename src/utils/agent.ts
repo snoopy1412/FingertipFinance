@@ -4,9 +4,10 @@ import { TaroAdapter } from "axios-taro-adapter";
 import { authTokenStorage } from "./storage";
 import { handleApiResponse } from "./response";
 import { encryptSensitiveData } from "./rsaEncryption";
+import { BASE_API_URL } from "@/constants/base";
 
 const instance = axios.create({
-  baseURL: "https://alpha.ecbos.com/api/v1",
+  baseURL: BASE_API_URL,
   timeout: 30000,
   adapter: TaroAdapter, // add this line，添加这一行使用taroAdapter
 });

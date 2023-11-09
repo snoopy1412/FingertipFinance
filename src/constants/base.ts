@@ -1,3 +1,6 @@
+// 接口地址
+export const BASE_API_URL = "https://demo.api.com/api";
+
 // rsa 公钥
 export const RSA_PUBLIC_KEY =
   "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCOPw2ovZYH23i7MC3EUD7m7knqIfbkH+lHeRgtS6+QDML0i4CrVHVVEBt+Ib7MCZg3bEF9C6S7aJCrFXQ95hTbLS3eHrkfRaTGrrL7zm40BE5FwtTqSOG9cf29qj69EtMSrWNwMve5Zgei062ei/AChXSNd8UI6T4b+3V0zuEm0wIDAQAB";
