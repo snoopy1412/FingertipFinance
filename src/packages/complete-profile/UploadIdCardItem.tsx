@@ -23,14 +23,14 @@ interface UploadIdCardItemProps {
   title: string;
   description: string;
   imageBackgroundUrl: string;
-  onClick: () => void;
+  onUpload: (file) => void;
 }
 
 const UploadIdCardItem = ({
   title = "头像面",
   description = "上传您的身份证头像面",
   imageBackgroundUrl,
-  onClick,
+  onUpload,
 }: UploadIdCardItemProps) => {
   const [imageUrl, setImageUrl] = useState<string>("");
 
@@ -38,6 +38,7 @@ const UploadIdCardItem = ({
     chooseImage().then((res: any) => {
       const tempFilePath = res.tempFilePaths?.[0];
       setImageUrl(tempFilePath);
+      onUpload(tempFilePath);
     });
   };
 
