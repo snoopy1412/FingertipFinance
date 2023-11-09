@@ -1,0 +1,23 @@
+.container {
+  margin-top: 13px;
+  display: flex;
+  width: 315px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.repayMoneyButton {
+  width: 145px;
+  height: 45px;
+  background: #ffffff;
+  border: 1px solid #c82248;
+  color: #c82248;
+  box-shadow: 0px 3px 9px 1px rgba(168, 39, 29, 0.3);
+}
+
+.borrowMoneyButton {
+  width: 145px;
+  height: 45px;
+  box-shadow: 0px 3px 9px 1px rgba(213, 59, 103, 0.3);
+}

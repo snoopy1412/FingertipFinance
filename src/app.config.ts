@@ -37,6 +37,30 @@ export default defineAppConfig({
       name: "申请记录",
       independent: false,
     },
+    {
+      root: "packages/repayment-list",
+      pages: ["index"],
+      name: "还款列表",
+      independent: false,
+    },
+    {
+      root: "packages/repayment-detail",
+      pages: ["index"],
+      name: "查看明细",
+      independent: false,
+    },
+    {
+      root: "packages/repayment-success",
+      pages: ["index"],
+      name: "还款成功",
+      independent: false,
+    },
+    {
+      root: "packages/repayment-form",
+      pages: ["index"],
+      name: "还款明细",
+      independent: false,
+    },
   ],
   window: {
     backgroundTextStyle: "light",

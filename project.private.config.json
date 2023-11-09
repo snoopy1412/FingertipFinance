@@ -5,6 +5,34 @@
       "list": [
         {
           "name": "",
+          "pathName": "packages/repayment-form/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "packages/repayment-success/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "packages/repayment-detail/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "packages/repayment-list/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "packages/loan-info-form/index",
           "query": "",
           "launchMode": "default",

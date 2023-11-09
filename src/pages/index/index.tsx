@@ -1,24 +1,41 @@
+/**
+ * 指尖贷首页
+ */
 import { View, Text } from "@tarojs/components";
-import { NoticeBar, Button } from "@nutui/nutui-react-taro";
-import PrivacyProtectionGuide from "./PrivacyProtectionGuide";
-import NoAdditionalFeesModal from "./NoAdditionalFeesModal";
-import "./index.scss";
+import { NoticeBar } from "@nutui/nutui-react-taro";
 import { useState } from "react";
+import BankServiceInfo from "./BankServiceInfo";
+import NotLoggedIn from "./NotLoggedIn";
+import { HomePageStatus } from "./data";
+import LoggedInNotUsed from "./LoggedInNotUsed";
+import LoggedInHasRecord from "./LoggedInHasRecord";
+
+import "./index.scss";
+import Taro from "@tarojs/taro";
 
 const noticeText =
   "本业务未与任何中介机构合作，除向用户收取正常贷款利息外，绝无任何附加费用！";
 
 function Index() {
-  const [privacyProtectionGuideVisible, setPrivacyProtectionGuideVisible] =
-    useState(false);
+  // faker data
+  const [status, setStatus] = useState(HomePageStatus.LoggedInHasRecord);
+
+  const handleBorrowMoneyButtonClick = () => {
+    // 跳转到借钱页面
+    Taro.navigateTo({
+      url: "/packages/loan/index",
+    });
+  };
+
+  const handleRepayMoneyButtonClick = () => {
+    // 跳转到还钱页面
+    Taro.navigateTo({
+      url: "/packages/repayment-list/index",
+    });
+  };
+
   return (
     <View className="index">
-      <NoAdditionalFeesModal />
-      <PrivacyProtectionGuide
-        open={privacyProtectionGuideVisible}
-        onCancel={() => setPrivacyProtectionGuideVisible(false)}
-        onOk={() => setPrivacyProtectionGuideVisible(false)}
-      />
       <View className="index__content">
         <NoticeBar
           content={noticeText}
@@ -37,25 +54,21 @@ function Index() {
           <Text className="estimate-section__interest">年利率5.9%</Text>
         </View>
       </View>
-      <View className="index__apply">
-        <Button
-          shape="round"
-          type="primary"
-          size="large"
-          className="apply__button"
-          onClick={() => setPrivacyProtectionGuideVisible(true)}
-        >
-          立即申请
-        </Button>
-        <View className="index__service-info">
-          <Text className="service-info__provider">
-            服务由连云港东方农村商业银行提供{" "}
-          </Text>
-          <Text className="service-info__contact-number">
-            联系电话：0518-85196008
-          </Text>
-        </View>
-      </View>
+      {status === HomePageStatus.NotLoggedIn && <NotLoggedIn />}
+      {status === HomePageStatus.LoggedInNotUsed && <LoggedInNotUsed />}
+      {status === HomePageStatus.LoggedInHasRecord && (
+        <LoggedInHasRecord
+          onBorrowMoneyButtonClick={() => {
+            handleBorrowMoneyButtonClick();
+          }}
+          onRepayMoneyButtonClick={() => {
+            handleRepayMoneyButtonClick();
+          }}
+        />
+      )}
+
+      {/* 服务银行消息 */}
+      <BankServiceInfo />
     </View>
   );
 }
