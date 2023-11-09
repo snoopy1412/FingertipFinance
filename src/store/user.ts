@@ -33,8 +33,10 @@ export const userStore = create<UserState & UserActions>()(
     (set, get) => ({
       // 用户的信息
       userProfile: null,
+      // TODO 假数据
       isLoggedIn: () => {
-        return !!get()?.userProfile?.phone && !!authTokenStorage.getToken();
+        // return !!get()?.userProfile?.phone && !!authTokenStorage.getToken();
+        return true;
       },
 
       /**

@@ -29,6 +29,7 @@ const RepaymentList = () => {
             dueTime={item.DQRQ}
             accountStatus={item.ZHZT}
             noteNumber={item.DKZH}
+            loanAccount={"1234567890"}
           />
         );
       })}

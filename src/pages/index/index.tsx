@@ -23,7 +23,7 @@ const noticeText =
 
 function Index() {
   const { isLoggedIn } = userStore();
-  const [status, setStatus] = useState(HomePageStatus.NotLoggedIn);
+  const [status, setStatus] = useState(HomePageStatus.LoggedInHasRecord);
 
   // 定义接口
   const { runAsync: fetchJudgeCanUseApp, loading: judgeCanUseAppLoading } =
@@ -84,17 +84,17 @@ function Index() {
   });
 
   // 根据接口返回的数据，判断当前页面状态
-  useEffect(() => {
-    if (!isLoggedIn) {
-      setStatus(HomePageStatus.NotLoggedIn);
-    } else {
-      if (data?.data?.advance === "sub") {
-        setStatus(HomePageStatus.LoggedInNotUsed);
-      } else if (data?.data?.advance === "get") {
-        setStatus(HomePageStatus.LoggedInHasRecord);
-      }
-    }
-  }, [isLoggedIn, data?.data]);
+  // useEffect(() => {
+  //   if (!isLoggedIn) {
+  //     setStatus(HomePageStatus.NotLoggedIn);
+  //   } else {
+  //     if (data?.data?.advance === "sub") {
+  //       setStatus(HomePageStatus.LoggedInNotUsed);
+  //     } else if (data?.data?.advance === "get") {
+  //       setStatus(HomePageStatus.LoggedInHasRecord);
+  //     }
+  //   }
+  // }, [isLoggedIn, data?.data]);
 
   const handleBorrowMoneyButtonClick = () => {
     // 跳转到借钱页面
